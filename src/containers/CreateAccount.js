@@ -1,11 +1,11 @@
 import * as React from 'react'
-import { ImageBackground, Text, TextInput, TouchableOpacity, View, KeyboardAvoidingView, Platform } from 'react-native';
+import { ImageBackground, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 import styles from '../styles/styles'
 
 function CreateAccount({navigation}) {
   return (
-    <KeyboardAvoidingView style={styles.container} behavior={ Platform.OS === 'ios' ? 'padding' : 'height' }>
+    <View style={styles.container}>
       <ImageBackground
         style={{ flex: 3, width: '100%' }}
         source={require('../assets/create-account.png')}
@@ -45,7 +45,7 @@ function CreateAccount({navigation}) {
         </TouchableOpacity>
       </View>
         
-      </KeyboardAvoidingView>
+      </View>
   )
 }
 
